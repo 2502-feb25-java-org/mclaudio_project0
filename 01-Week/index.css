@@ -1,4 +1,4 @@
-body{
+body {
   background-color: teal;
 }
 #java {
@@ -7,6 +7,15 @@ body{
 .yellow {
   color: yellow;
 }
-li{
+li {
   color: blue;
+}
+table,
+thead,
+tbody td {
+  width: 50%;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 0.2px;
 }
