@@ -4,34 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
-      rel="stylesheet"
-      type="text/css"/>
-      <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous"
+  />
+
+      <link rel="stylesheet" type="text/css" href="../Styles/bootstrap.css" />
   </head>
   <body>
-      <nav class="navbar navbar-expand-md navbar-light bg-light bg-light sticky-top">
-          <a class="navbar-brand" href="#"><img src="rev-logo-2.png" width="100" length="100"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-          data-target="#navbarResponsive"> 
-          <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              
+      <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+      <a class="navbar-brand" href="#"
+        ><img src="Revature.jpg" width="100" length="100"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="navbarResponsive"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="../02-Week/index.html">Game</a>
+            </li>
+          <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -39,18 +55,22 @@
               role="button"
               data-toggle="dropdown"
               aria-haspopup="true"
-              aria-expanded="false">
+              aria-expanded="false"
+            >
               LogIn/SignUp
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#Login">LogIn(Existing User)</a>
-              <a class="dropdown-item" href="signup.html">SignUp(New User)</a>
+              <a class="dropdown-item" href="login.html">Login</a>
+              <a class="dropdown-item" href="signup.html">Sign Up</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#AdminLogIn">Admin LogIn</a>
+              <a class="dropdown-item" href="AdminLogIn.html">Admin LogIn</a>
             </div>
           </li>
+        </ul>
       </div>
     </nav>
+
+    
     <div class="container">
       <div class="row">
         <div class=" col-xl-8 offset-xl-2 py-5">
@@ -58,7 +78,6 @@
             Contact Us
           </h1>
 
-          <!-- We're going to place the form here in the next step -->
           <div class="panel panel-default">
           <form>
             <form
@@ -163,11 +182,54 @@
                   <div class=" text-center col-md-12">
                     <input
                       type="submit"
+                      onclick="alert('Thank You')"
                       class="btn btn-success btn-send"
                       value="Send message"/>
                   </div>
                 </div>
             </div>
+            </form>
+            <footer class="page-footer font-small unique-color-dark pt-4 fixed-bottom">
+                <div class="container-fluid padding">
+          
+                <!-- Social buttons -->
+                <ul class="list-unstyled list-inline text-center">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-fb mx-1">
+                      <i class="fab fa-facebook-f"> </i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-tw mx-1">
+                      <i class="fab fa-twitter"> </i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-gplus mx-1">
+                      <i class="fab fa-google-plus-g"> </i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                      <i class="fab fa-linkedin-in"> </i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                      <i class="fab fa-instagram "> </i>
+                    </a>
+                  </li>
+                  </li>
+                </ul>
+               </div>
+              <!-- Footer Elements -->
+          
+              
+              <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="**"> Revature.com</a>
+              </div>
+              
+            </footer>
                 
                     </p>
                   </div>
@@ -178,6 +240,7 @@
         </div>
       </div>
     </div>
+    
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -199,6 +262,7 @@
       integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8="
       crossorigin="anonymous"
     ></script>
-    <script src="contact.js"></script>
+    <script src="../Scripts/pratice01.js"></script>
+    
   </body>
 </html>

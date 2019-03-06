@@ -1,0 +1,64 @@
+body {
+  background-color: rgba(128, 128, 128, 0.63);
+}
+.navbar {
+  padding: 0.8rem;
+}
+footer {
+  position: fixed;
+  background-color: rgba(128, 128, 128, 0.904);
+  text-align: center;
+  padding: 5px;
+  color: rgb(241, 160, 8);
+}
+footer li {
+  list-style-type: none;
+  display: inline;
+  margin-right: 30px;
+}
+footer .fa {
+  font-size: 35px;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.fa-facebook {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+}
+.fab-fa-twitter {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+}
+.fab-fa-google-plus-g {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+}
+.fab-fa-linkedin-in {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+}
+.fab-fa-dribbble {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

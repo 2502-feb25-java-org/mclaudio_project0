@@ -1,29 +1,407 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<html>
   <head>
-    <title>
-      Revature Sign Up
-    </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Form Tutorial by Bootstrapious.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous"
+  />
+
+      <link rel="stylesheet" type="text/css" href="../Styles/bootstrap.css" />
   </head>
   <body>
+      <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+      <a class="navbar-brand" href="#"
+        ><img src="Revature.jpg" width="100" length="100"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="navbarResponsive"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="../02-Week/index.html">Game</a>
+            </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              LogIn/SignUp
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="login.html">Login</a>
+              <a class="dropdown-item" href="signup.html">Sign Up</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="AdminLogIn.html">Admin LogIn</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    
+    <div class="container">
+      <div class="row">
+        <div class=" col-xl-8 offset-xl-2 py-5">
+          <h1 class="text-center">
+            Sign Up
+          </h1>
+
+          <div class="panel panel-default">
+          <form>
+              <form
+              id="signUp-form"
+              method="post"
+              action="contact.php"
+              role="form"
+            >
+              <div class="controls">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_name"> FirstName *</label>
+                      <input
+                        id="firstName"
+                        type="text"
+                        name="firstName"
+                        class="form-control"
+                        oninput="setfirstName(this)";
+                        placeholder="Enter First Name *"
+                        required="required"
+                        data-error="Firstname is required."
+                      />
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_lastname">LastName *</label>
+                      <input
+                        id="lastName"
+                        type="text"
+                        name="lastName"
+                        class="form-control"
+                        oninput="setlastName(this)";
+                        placeholder="Enter Last Name *"
+                        required="required"
+                        data-error="Lastname is required."
+                      />
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_middleName">Middle Name </label>
+                          <input
+                            id="middleName"
+                            type="text"
+                            name="middleName"
+                            class="form-control"
+                            oninput="setmiddleName(this)";
+                            placeholder="Enter Middle Name *"
+                           
+                          />
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_email">Email *</label>
+                          <input
+                            id="email"
+                            type="text"
+                            name="email"
+                            class="form-control"
+                            oninput="setEmail(this)";
+                            placeholder="Enter Email *"
+                            required="required"
+                            data-error="Valid emial is required."
+                          />
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="form_address"> Addrees *</label>
+                              <input
+                                id="address"
+                                type="text"
+                                name="address"
+                                class="form-control"
+                                oninput="setaddress(this)";
+                                placeholder="Enter Address*"
+                                required="required"
+                                data-error="Address is required."
+                              />
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="form_zipCode"> Zipcode *</label>
+                              <input
+                                id="zipCode"
+                                type="text"
+                                name="zipCode"
+                                class="form-control"
+                                oninput="setzipCode(this)";
+                                placeholder="Enter Zipcode *"
+                                required="required"
+                                data-error=" Zipcode is required."
+                              />
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          </div>    
+                          <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="form_city"> City *</label>
+                                  <input
+                                    id="city"
+                                    type="text"
+                                    name="city"
+                                    class="form-control"
+                                    oninput="setcity(this)";
+                                    placeholder="Enter City *"
+                                    required="required"
+                                    data-error="City is required."
+                                  />
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="form_state">State *</label>
+                                  <input
+                                    id="state"
+                                    type="text"
+                                    name="state"
+                                    class="form-control"
+                                    oninput="setState(this)";
+                                    placeholder="Enter State *"
+                                    required="required"
+                                    data-error="State is required."
+                                  />
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                              </div>
+                              </div>    
+                              <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="form_country"> Country </label>
+                                      <input
+                                        id="country"
+                                        type="text"
+                                        name="country"
+                                        class="form-control"
+                                        oninput="setCountry(this)";
+                                        placeholder="Enter Country*"
+                                        required="required"
+                                        data-error="Country is required."
+                                      />
+                                      <div class="help-block with-errors"></div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="form_age"> Age *</label>
+                                      <input
+                                        id="age"
+                                        type="text"
+                                        name="age"
+                                        class="form-control"
+                                        oninput="setage(this)";
+                                        placeholder="Enter Age *"
+                                        required="required"
+                                        data-error="Age is required."
+                                      />
+                                      <div class="help-block with-errors"></div>
+                                    </div>
+                                  </div>
+                                  
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label for="phone">Phone Number: </label>
+                                              <input type="tel" name="phone" id="phone" oninput="setphone(this);" class="form-control"
+                                                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group newcol">
+                                              <label for="gender">Gender: </label>
+                                              <div class="form-check">
+                                                  <div class="row">
+                                                      <div class="col">
+                                                          <div class="row">
+                                                              <div class="col">
+                                                                  <input class="form-check-input qwe" type="radio" onchange="setg(this);"
+                                                                      name="gender" id="male">
+                                                                  <label for="male">Male</label></div>
+                                                              <div class="col">
+                                                                  <input class="form-check-input qwe" type="radio" onchange="setg(this);"
+                                                                      name="gender" id="female">
+                                                                  <label for="female">Female</label></div>
+                                                              <div class="col">
+                                                                  <input class="form-check-input qwe" type="radio" onchange="setg(this);"
+                                                                      name="gender" id="other">
+                                                                  <label for="other">Other</label></div>
+                                                          </div>
+                                                      </div>
+                                                      
+                                                  </div>
+                                              </div>
+                                          </div>
+                          
+                                      </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                
+                
+                </div>
+               </div>
+            </form>
+          
+
+
+            
+            
+            
+            
+            
+            
+            
+            <footer class="page-footer font-small unique-color-dark pt-4 fixed-bottom">
+                <div class="container-fluid padding">
+          
+                <!-- Social buttons -->
+                <ul class="list-unstyled list-inline text-center">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-fb mx-1">
+                      <i class="fab fa-facebook-f"> </i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-tw mx-1">
+                      <i class="fab fa-twitter"> </i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-gplus mx-1">
+                      <i class="fab fa-google-plus-g"> </i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                      <i class="fab fa-linkedin-in"> </i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                      <i class="fab fa-instagram "> </i>
+                    </a>
+                  </li>
+                  </li>
+                </ul>
+               </div>
+              <!-- Footer Elements -->
+          
+              
+              <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="**"> Revature.com</a>
+              </div>
+              
+            </footer>
+                
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"
+      integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Scripts/pratice01.js"></script>
+    
+  </body>
+</html>
+
+
+
+
+
+<!------
+
+  <body onload="loadOldSignUp()">
       <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-          <a class="navbar-brand" href="#"><img src="rev-logo-2.png" width="100" length="100"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-          data-target="#navbarResponsive"> 
+          <a class="navbar-brand" href="#"><img src="Revature.jpg" width="100" length="100"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" data-target="#navbarResponsive"> 
           <span class="navbar-toggler-icon"></span>
           </button>
-        
-          <div class="collapse navbar-collapse" id="navbarResponsive">
+         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -31,8 +409,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
-              
-            <a
+              <li class="nav-item">
+                  <a class="nav-link" href="../02-Week/index.html">Game</a>
+                </li>
+             <a
               class="nav-link dropdown-toggle"
               href="#"
               id="navbarDropdown"
@@ -43,7 +423,7 @@
               LogIn/SignUp
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#Login">LogIn(Existing User)</a>
+              <a class="dropdown-item" href="login.html">LogIn(Existing User)</a>
               <a class="dropdown-item" href="signup.html">SignUp(New User)</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#AdminLogIn">Admin LogIn</a>
@@ -54,101 +434,69 @@
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1>Sign In</h1> 
+              <h1>Sign Up</h1> 
                <div>
           </div>
 
       <form>
           <div class="form-group">
-              <label for="exampleInputEmail1">First name</label>
+              <label for="exampleInputfirstName1">First Name</label>
               <input
-                type="email"
+                type="text" 
                 class="form-control"
-                id="exampleInputFirstName"
-                aria-describedby="FirstNameHelp"
-                placeholder="Enter First Name"
-              />
+                id="firstName" onchange="storeSignUp()"
+                aria-describedby="firstNameHelp"
+                placeholder="Enter First Name" />
               <div class="form-group">
-                  <label for="exampleInputEmail1">Last name</label>
+                  <label for="exampleInputlastName1">Last Name</label>
                   <input
-                    type="email"
+                    type="lastName"  
                     class="form-control"
-                    id="exampleInputLastName"
-                    aria-describedby="LastNamHelp"
-                    placeholder="Enter Last Name"
-                  />
+                    id="lastName" onchange="storeSignUp()"
+                    aria-describedby="lastNamHelp"
+                    placeholder="Enter Last Name"/>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input
             type="email"
             class="form-control"
-            id="exampleInputEmail1"
+            id="email" onchange="storeSignUp()"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
+            placeholder="Enter Email"
           />
           <small id="emailHelp" class="form-text text-muted"
             >We'll never share your email with anyone else.</small
           >
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+          <label for="exampleInputPassWord1">Password</label>
           <input
-            type="password"
+            type="passWord"
             class="form-control"
-            id="exampleInputPassword1"
+            id="passWord" onchange="storeSignUp()"
             placeholder="Password"
           />
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Phone Number</label>
-            <input
-              type="email"
+            <label for="exampleInputPhoneNumber1">Phone Number</label>
+            <input type="tel" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              type="PhoneNumber"
               class="form-control"
-              id="exampleInputPhoneNumber1"
+              id="phoneNumber" onchange="storeSignUp()" 
               aria-describedby="PhoneNumberHelp"
               placeholder="Enter Phone Number"
-            />
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="exampleRadios"
-            id="exampleRadios1"
-            value="option1"
-            checked
-          />
-          <label class="form-check-label" for="exampleRadios1">
-            Male
-          </label>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="exampleRadios"
-            id="exampleRadios2"
-            value="option2"
-          />
-          <label class="form-check-label" for="exampleRadios2">
-            Female
-          </label>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="exampleRadios"
-            id="exampleRadios3"
-            value="option3"
-          
-          />
-          <label class="form-check-label" for="exampleRadios3">
-            Other
-          </label>
+              error="use format xxx-xxx-xxxx" id="phoneNumber" onchange="saveChanges();" onkeypress="return isNumber(event);"required/>
+            
+                <label for="male" > Male<input type="radio" name="gender"  id="male" /></label>
+                <label for="female"> Female<input type="radio" name="gender" id="female" /> </label>
+                <label for="others"> Other<input type="radio" name="gender"  id="other" /></label>
+            
         </div>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div>
+           
+        <button type="submit" onclick="storeSignUp();" class="btn btn-primary">Sign Up</button>
       </form>
-    </header>
-  </body>
-</html>
+      </div>
+    </div>
+  -->

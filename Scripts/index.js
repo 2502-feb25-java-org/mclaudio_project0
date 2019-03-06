@@ -167,7 +167,7 @@ let objStudent=new Student('Brandon',45,'whatever','CUNY');
 objStudent.sayDetails();
 */
 
-class PersonClass {
+/*class PersonClass {
   constructor(name, age, city) {
     this.name = name;
     this.age = age;
@@ -187,3 +187,17 @@ class StudentClass extends PersonClass {
 }
 let student = new StudentClass('Stephen', 89, 'Bazinga', 12);
 student.sayDetails();
+*/
+
+window.addEventListener('DomConentLoaded', () => {
+  let header = document.getElementById('header-text');
+  let colA = document.getElementById('colA');
+
+  let clickCounter = 0;
+
+  header.addEventListener('click', () => {
+    clickCounter++;
+    header.textContents = 'DOM change the text(clicked ${clickCounter}) time';
+    colA.innerHTML = '<em>col</em> <u>A</u>';
+  });
+});
